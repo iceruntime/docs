@@ -9,7 +9,7 @@ The benefits are threefold:
  - unification of developer tooling.
  - integration with the Nix ecosystem.
 
-### That sounds good! But what do you mean with frontend and backend?
+### That sounds good! How can I use ICE for my language?
 
 See here: considering haskell, bla bla IO and we are an alternative monad.
 
