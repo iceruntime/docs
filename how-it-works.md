@@ -20,9 +20,8 @@ Theoretically, ICE is intended to be highly modular, but its features are still 
 Depending on your goals, various solutions are possible, contact us to discuss!
 
 
-## Components
+## ICE overview
 
-<!-- , all the while being agnostic over the implemention of the backend via [type provider plugins]() and [function plugins](). -->
 
 There are the following components:
  - icecore-interface (a formal specification of the interface
