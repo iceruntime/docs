@@ -11,7 +11,7 @@ The benefits are threefold:
 
 ### Sounds good! How would I use ICE for my new language?
 
-First, you have to make sure that there is a [typing provider plugin]() available for the language(s) you want to implement your new language in. Implement your backend pipeline steps such as module resolution, typechecking and compilation. Then compile them into a [function plugin]() which can be used from ICE. Finally, write the  code which glues all your pipeline steps together in one of the supported [ICE-languages]().
+First, you have to make sure that there is a [typing provider plugin]() available for the language(s) you want to implement your new language in. Implement your backend pipeline steps such as module resolution, typechecking and compilation. Then compile them into a [function plugin]() which can be used from ICE. Finally, write the code which glues all your pipeline steps together in one of the supported [ICE-languages]().
 
 ### What if I want to use ICE for my already existing language?
 
@@ -27,6 +27,7 @@ ICE aims to provide for all developer toolchain needs. Use ICE to take care of a
 Use [Nix]() infrastructure to manage your packages and other build artifacts. ICE provides abstractions over Nix store operations and allows you to manage system libraries and your own packages in a uniform way. The full power of Nix derivations is available if needed. Read the [details page]() for more.
 
 ### Parsing
+ICE provides an easy way for specifying grammars, and you can automatically generate parsers using tools like [treesitter]() or [happy](). The parser is included automatically in your pipeline, independent of the programming language you use for other transformations. Read the [details page]() for more.
 
 ### Caching
 
