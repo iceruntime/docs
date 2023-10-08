@@ -9,9 +9,15 @@ The benefits are threefold:
  - unification of developer tooling.
  - integration with the Nix ecosystem.
 
-### Sounds good! How can I use ICE for my new language?
+### Sounds good! How would I use ICE for my new language?
 
-See here: considering haskell, bla bla IO and we are an alternative monad.
+First, you have to make sure that there is a [typing provider plugin]() available for the language(s) you want to implement your new language in. Implement your backend pipeline steps such as module resolution, typechecking and compilation. Then compile them into a [function plugin]() which can be used from ICE. Finally, write the  code which glues all your pipeline steps together in one of the supported [ICE-languages]().
+
+### What if I want to use ICE for my already existing language?
+
+Theoretically, ICE is intended to be highly modular, but its features are still designed around it being the main entry point of a language toolchain. This means that to reap most of the benefits of the ICE ecosystem, you are going to have to use ICE as a thin layer around your toolchain. Alternatively, you could use ICE as a driver for a part of your pipeline.
+
+Depending on your goals, various solutions are possible, contact us to discuss!
 
 
 ## Components
