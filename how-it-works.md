@@ -23,6 +23,10 @@ Depending on your goals, various solutions are possible, contact us to discuss!
 
 ### Package management
 
+### Parsing
+
+### Strong static types
+
 ### Caching
 
 ### Incremental computation
