@@ -5,8 +5,9 @@
 ICE is an infrastructure provider for language toolchains. Its core function is to provide primitives for [package management](), [caching]() and [incremental computation]() The idea is that with ICE, language designers can focus on the backend of their language while utilizing the power of ICE for easily dealing with frontend matters.
 
 The benefits are threefold:
+ - easy interop with other ICE-languages.
  - unification of developer tooling.
- - easy integration with the Nix ecosystem.
+ - integration with the Nix ecosystem.
 
 
 <!-- , all the while being agnostic over the implemention of the backend via [type provider plugins]() and [function plugins](). -->
