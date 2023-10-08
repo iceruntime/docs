@@ -21,15 +21,20 @@ Depending on your goals, various solutions are possible, contact us to discuss!
 
 ## Features
 
+ICE aims to provide for all developer toolchain needs. Use ICE to take care of all state and network related problems and focus on developing the core aspects of your toolchain. Additionally, you get interop with other ICE-based tools almost for free!
+
 ### Package management
+Use [Nix]() infrastructure to manage your packages and other build artifacts. ICE provides abstractions over Nix store operations and allows you to manage system libraries and your own packages in a uniform way. The full power of Nix derivations is available if needed. Read the [details page]() for more.
 
 ### Parsing
-
-### Strong static types
 
 ### Caching
 
 ### Incremental computation
+
+### Strong static types
+
+### Language agnostic
 
 
 ## ICE ecosystem
