@@ -19,9 +19,16 @@ Theoretically, ICE is intended to be highly modular, but its features are still 
 
 Depending on your goals, various solutions are possible, contact us to discuss!
 
+## Features
 
-## ICE overview
+### Package management
 
+### Caching
+
+### Incremental computation
+
+
+## ICE ecosystem
 
 There are the following components:
  - icecore-interface (a formal specification of the interface
@@ -32,9 +39,27 @@ There are the following components:
     - exposing the icecorelib to purescript
     - in the best case this can take any icecore-interface implementation
  - a future higher level language which embeds an icecore-interface
+ - ice-plugins
+    - ice type providers
+    - ice functions
+ - rei buildsystem: types for Nix packages
+
+### `icecore` interface
+
+### `icecore` implementations
+
+### `ice-plugins`
+
+### `ice-languages`
+
+#### PureScript
+
+#### High level language
+Possibly based on `kami`.
+
+### `rei` buildsystem
 
 
-## Icecore-interface
 
 
 
