@@ -9,6 +9,12 @@ The benefits are threefold:
  - unification of developer tooling.
  - integration with the Nix ecosystem.
 
+### That sounds good! But what do you mean with frontend and backend?
+
+See here: considering haskell, bla bla IO and we are an alternative monad.
+
+
+## Components
 
 <!-- , all the while being agnostic over the implemention of the backend via [type provider plugins]() and [function plugins](). -->
 
