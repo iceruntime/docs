@@ -43,10 +43,10 @@ ICE is the glue code around your pipeline steps, which can be implemented in whi
 
 The architecture of ICE is very modular, which means that its various constituents can be iterated upon individually.
 
-### `icecore` library implementations
-The core primitives of ICE are specified in the [`icecore`]() interface. Any implementation which adheres to the specification can be used by the other components of ICE. We provide the [`icecore-standard`]() implementation. An `icecore` library can be used like any other C-library, but is meant to be used from `icecontrol` languages which provide a proper typesystem to guarantee type safety.
+### icecore library implementations
+The core primitives of ICE are specified in the [icecore]() interface. Any implementation which adheres to the specification can be used by the other components of ICE. We provide the [`icecore-standard`]() implementation. An icecore library can be used like any other C-library, but is meant to be used from icecontrol languages which provide a proper typesystem to guarantee type safety.
 
-### `icecontrol` languages
+### icecontrol languages
 The first `icecontrol` language is PureScript, with a dedicated [`PureIce`]() backend. A dependently typed `icecontrol` language is planned based on [`Kami`](). Dev toolchain developers write their glue code in an `icecontrol` language, and their individual transformation steps as ICE-functions.
 
 ### ICE-functions
