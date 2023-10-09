@@ -2,7 +2,7 @@
 
 **NOTE**: This project is very early in its design phase and this document may change relatively frequently as we try to work out the best overall structure and tools/frameworks/languages that we want to use. Also keep in mind that this document is written in a way that suggests that ICE is already implemented, but at the moment this is just a glimpse into the future which we aim to bring about.
 
-ICE is an infrastructure provider for dev toolchains. Its core function is to provide primitives for [package management](), [caching]() and [incremental computation]() The idea is that with ICE, language designers can focus on the backend of their language while utilizing the power of ICE for easily dealing with frontend matters.
+[ICE](https://github.com/iceruntime/ice) is an infrastructure provider for dev toolchains. Its core function is to provide primitives for [package management](), [caching]() and [incremental computation]() The idea is that with ICE, language designers can focus on the backend of their language while utilizing the power of ICE for easily dealing with frontend matters.
 
 The benefits are threefold:
  - Easy interop with other ICE-languages.
