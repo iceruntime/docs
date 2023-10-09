@@ -44,7 +44,7 @@ ICE is the glue code around your pipeline steps, which can be implemented in whi
 The architecture of ICE is very modular, which means that its various constituents can be iterated upon individully.
 
 ### `icecore` library implementations
-The core primitives of ICE are specified in the [`icecore-interface`](). Any implementation which adheres to the specification can be used by the other components of ICE. We provide the [`icecore-main`]() implementation.
+The core primitives of ICE are specified in the [`icecore`]() interface. Any implementation which adheres to the specification can be used by the other components of ICE. We provide the [`icecore-standard-impl`]() implementation.
 
 ### `ice-plugins`
 
