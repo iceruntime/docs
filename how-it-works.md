@@ -47,7 +47,7 @@ The architecture of ICE is very modular, which means that its various constituen
 The core primitives of ICE are specified in the [icecore]() interface. Any implementation which adheres to the specification can be used by the other components of ICE. We provide the [`icecore-standard`]() implementation. An icecore library can be used like any other C-library, but is meant to be used from ice control languages which provide a proper typesystem to guarantee type safety.
 
 ### ice control languages
-The first ice control language is PureScript, with a dedicated [`PureIce`]() backend. A dependently typed ice control language is planned based on [`Kami`](). Dev toolchain developers write their glue code in an ice control language, and their individual transformation steps as ICE-functions.
+The first ice control language is PureScript, with a dedicated [`PureIce`]() backend. A dependently typed ice control language is planned based on [`Kami`](). Dev toolchain developers write their glue code in a control language, and their individual transformation steps as ICE-functions.
 
 ### ICE-functions
 
