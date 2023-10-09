@@ -35,9 +35,8 @@ The result of every ICE function is transparently cached on disk if the ICE runt
 ### Incremental computation
 ICE has an intrinsic concept of diff-based computation, i.e., every ICE function gets passed enough information to only recompute the parts which changed. This makes it ideal as runtime for typechecking workloads where users typically only change local parts of their program. ICE provides the unopinionated substrate on which incremental computation can happen, and every ICE function can implement it in its own way. See the [dia research project]() whose goal is a language in which incremental computation instructions can be automatically generated. Read the [details page]() for more.
 
-### Strong static types
-
 ### Language agnostic
+ICE is the glue code around your pipeline steps, which can be implemented in whichever language you choose (as long as a [type provider plugin]() exists). In fact, you can combine multiple languages easily and due to incremental computation, the communication cost between them is kept at a minimum! Read the [details page]() for more.
 
 
 ## ICE ecosystem
