@@ -41,23 +41,10 @@ ICE is the glue code around your pipeline steps, which can be implemented in whi
 
 ## ICE ecosystem
 
-There are the following components:
- - icecore-interface (a formal specification of the interface
-   that an icecorelib has to expose)
- - beam-icecorelib
-    - an implementation of the icecore-interface with the BEAM virtual machine (erlang, elixir)
- - purescript-on-ice
-    - exposing the icecorelib to purescript
-    - in the best case this can take any icecore-interface implementation
- - a future higher level language which embeds an icecore-interface
- - ice-plugins
-    - ice type providers
-    - ice functions
- - rei buildsystem: types for Nix packages
+The architecture of ICE is very modular, which means that its various constituents can be iterated upon individully.
 
-### `icecore` interface
-
-### `icecore` implementations
+### `icecore` library implementations
+The core primitives of ICE are specified in the [`icecore-interface`](). Any implementation which adheres to the specification can be used by the other components of ICE. We provide the [`icecore-main`]() implementation.
 
 ### `ice-plugins`
 
@@ -73,6 +60,26 @@ Possibly based on `kami`.
 
 
 
+
+
+
+
+
+
+
+There are the following components:
+ - icecore-interface (a formal specification of the interface
+   that an icecorelib has to expose)
+ - beam-icecorelib
+    - an implementation of the icecore-interface with the BEAM virtual machine (erlang, elixir)
+ - purescript-on-ice
+    - exposing the icecorelib to purescript
+    - in the best case this can take any icecore-interface implementation
+ - a future higher level language which embeds an icecore-interface
+ - ice-plugins
+    - ice type providers
+    - ice functions
+ - rei buildsystem: types for Nix packages
 
 
 
