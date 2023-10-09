@@ -58,8 +58,8 @@ The main purpose of ICE is to be an environment in which ICE-functions, i.e., th
 ### Rei buildsystem and generic language frontend
 Usually language toolchains follow a similar general pattern, [Rei]() is a framework written in PureIce, catering to this standard use case. This means that with Rei, you can get a language toolchain up and running simply by passing it ICE-functions for pipeline steps such as typechecking and compilation, everything else such as package management will use standard defaults.
 
-## Toolchains using ice
-Currently the following projects are planned to run on ice:
+## Toolchains using ICE
+Currently the following projects are planned to run on ICE:
  - [Rei]()
  - [Kami]()
  - [A package manager for Agda]()
