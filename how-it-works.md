@@ -24,19 +24,19 @@ Depending on your goals, various solutions are possible, contact us to discuss!
 ICE aims to provide for all developer toolchain needs. Use ICE to take care of all state and network related problems and focus on developing the core aspects of your toolchain. Additionally, you get interop with other ICE-based tools almost for free!
 
 ### Package management
-Use [Nix]() infrastructure to manage your packages and other build artifacts. ICE provides abstractions over Nix store operations and allows you to manage system libraries and your own packages in a uniform way. The full power of Nix derivations is available if needed. Read the [details page]() for more.
+Use [Nix]() infrastructure to manage your packages and other build artifacts. ICE provides abstractions over Nix store operations and allows you to manage system libraries and your own packages in a uniform way. The full power of Nix derivations is available if needed.
 
 ### Parsing
-ICE provides an easy way for specifying grammars, and you can automatically generate parsers using tools like [treesitter]() or [happy](). The parser is included effortlessly in your pipeline, independent of the programming language you use for other transformations. Read the [details page]() for more.
+ICE provides an easy way for specifying grammars, and you can automatically generate parsers using tools like [treesitter]() or [happy](). The parser is included effortlessly in your pipeline, independent of the programming language you use for other transformations.
 
 ### Caching
-The result of every ICE function is transparently cached on disk if the ICE runtime determines it beneficial to do so. The caching is all done via Nix which means that it can be easily shared with other developers, improving the build experience of everyone. Read the [details page]() for more.
+The result of every ICE function is transparently cached on disk if the ICE runtime determines it beneficial to do so. The caching is all done via Nix which means that it can be easily shared with other developers, improving the build experience of everyone.
 
 ### Incremental computation
-ICE has an intrinsic concept of diff-based computation, i.e., every ICE function gets passed enough information to only recompute the parts which changed. This makes it ideal as runtime for typechecking workloads where users typically only change local parts of their program. ICE provides the unopinionated substrate on which incremental computation can happen, and every ICE function can implement it in its own way. See the [dia research project]() whose goal is a language in which incremental computation instructions can be automatically generated. Read the [details page]() for more.
+ICE has an intrinsic concept of diff-based computation, i.e., every ICE function gets passed enough information to only recompute the parts which changed. This makes it ideal as runtime for typechecking workloads where users typically only change local parts of their program. ICE provides the unopinionated substrate on which incremental computation can happen, and every ICE function can implement it in its own way. See the [dia research project]() whose goal is a language in which incremental computation instructions can be automatically generated.
 
 ### Language agnostic
-ICE is the glue code around your pipeline steps, which can be implemented in whichever language you choose (as long as a [type provider plugin]() exists). In fact, you can combine multiple languages easily and due to incremental computation, the communication cost between them is kept at a minimum! Read the [details page]() for more.
+ICE is the glue code around your pipeline steps, which can be implemented in whichever language you choose (as long as a [type provider plugin]() exists). In fact, you can combine multiple languages easily and due to incremental computation, the communication cost between them is kept at a minimum!
 
 
 ## ICE ecosystem
@@ -47,35 +47,20 @@ The architecture of ICE is very modular, which means that its various constituen
 The core primitives of ICE are specified in the [icecore]() interface. Any implementation which adheres to the specification can be used by the other components of ICE. We provide the [`icecore-standard`]() implementation. An icecore library can be used like any other C-library, but is meant to be used from ice control languages which provide a proper typesystem to guarantee type safety.
 
 ### ice control languages
-The first ice control language is PureScript, with a dedicated [`PureIce`]() backend. A dependently typed ice control language is planned based on [`Kami`](). Dev toolchain developers write their glue code in a control language, and their individual transformation steps as ICE-functions.
-
-### ICE-functions
+The first ice control language is PureScript, with a dedicated [PureIce]() backend. A dependently typed ice control language is planned based on [Kami](). Dev toolchain developers write their glue code in a control language, and their individual transformation steps as ICE-functions.
 
 ### ICE-type providers
+ICE is agnostic over the runtime representation of data. This means that various language runtimes and binary representation formats can coexist in one dev toolchain. The support for various data type representations is given by ICE-type provider plugins, such as [`haskell-ice-types`]() and [`rust-ice-types`](). Such plugins can be loaded dynamically at runtime if they are required.
 
-### Rei buildsystem
+### ICE-functions
+The main purpose of ICE is to be an environment in which ICE-functions, i.e., the various computation or transformation steps of your toolchain can be run. You can use any language to write ICE-functions, as long as a supporting ICE-type provider exists.
 
+### Rei buildsystem and generic language frontend
+Usually language toolchains follow a similar general pattern, [Rei]() is a framework written in PureIce, catering to this standard use case. This means that with Rei, you can get a language toolchain up and running simply by passing it ICE-functions for pipeline steps such as typechecking and compilation, everything else such as package management will use standard defaults.
 
-
-
-
-
-
-
-
-There are the following components:
- - icecore-interface (a formal specification of the interface
-   that an icecorelib has to expose)
- - beam-icecorelib
-    - an implementation of the icecore-interface with the BEAM virtual machine (erlang, elixir)
- - purescript-on-ice
-    - exposing the icecorelib to purescript
-    - in the best case this can take any icecore-interface implementation
- - a future higher level language which embeds an icecore-interface
- - ice-plugins
-    - ice type providers
-    - ice functions
- - rei buildsystem: types for Nix packages
-
-
+## Toolchains using ice
+Currently the following projects are planned to run on ice:
+ - [Rei]()
+ - [Kami]()
+ - [A package manager for Agda]()
 
