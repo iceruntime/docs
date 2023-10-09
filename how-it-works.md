@@ -27,11 +27,13 @@ ICE aims to provide for all developer toolchain needs. Use ICE to take care of a
 Use [Nix]() infrastructure to manage your packages and other build artifacts. ICE provides abstractions over Nix store operations and allows you to manage system libraries and your own packages in a uniform way. The full power of Nix derivations is available if needed. Read the [details page]() for more.
 
 ### Parsing
-ICE provides an easy way for specifying grammars, and you can automatically generate parsers using tools like [treesitter]() or [happy](). The parser is included automatically in your pipeline, independent of the programming language you use for other transformations. Read the [details page]() for more.
+ICE provides an easy way for specifying grammars, and you can automatically generate parsers using tools like [treesitter]() or [happy](). The parser is included effortlessly in your pipeline, independent of the programming language you use for other transformations. Read the [details page]() for more.
 
 ### Caching
+The result of every ICE function is transparently cached on disk if the ICE runtime determines it beneficial to do so. The caching is all done via Nix which means that it can be easily shared with other developers, improving the build experience of everyone. Read the [details page]() for more.
 
 ### Incremental computation
+ICE has an intrinsic concept of diff-based computation, i.e., every ICE function gets passed enough information to only recompute the parts which changed. This makes it ideal as runtime for typechecking workloads where users typically only change local parts of their program. ICE provides the unopinionated substrate on which incremental computation can happen, and every ICE function can implement it in its own way. See the [dia research project]() whose goal is a language in which incremental computation instructions can be automatically generated. Read the [details page]() for more.
 
 ### Strong static types
 
