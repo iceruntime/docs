@@ -2,12 +2,12 @@
 
 **NOTE**: This project is very early in its design phase and this document may change relatively frequently as we try to work out the best overall structure and tools/frameworks/languages that we want to use. Also keep in mind that this document is written in a way that suggests that ICE is already implemented, but at the moment this is just a glimpse into the future which we aim to bring about.
 
-ICE is an infrastructure provider for language toolchains. Its core function is to provide primitives for [package management](), [caching]() and [incremental computation]() The idea is that with ICE, language designers can focus on the backend of their language while utilizing the power of ICE for easily dealing with frontend matters.
+ICE is an infrastructure provider for dev toolchains. Its core function is to provide primitives for [package management](), [caching]() and [incremental computation]() The idea is that with ICE, language designers can focus on the backend of their language while utilizing the power of ICE for easily dealing with frontend matters.
 
 The benefits are threefold:
- - easy interop with other ICE-languages.
- - unification of developer tooling.
- - integration with the Nix ecosystem.
+ - Easy interop with other ICE-languages.
+ - Unification of developer tooling.
+ - Integration with the Nix ecosystem.
 
 ### Sounds good! How would I use ICE for my new language?
 
@@ -47,16 +47,13 @@ The architecture of ICE is very modular, which means that its various constituen
 The core primitives of ICE are specified in the [`icecore`]() interface. Any implementation which adheres to the specification can be used by the other components of ICE. We provide the [`icecore-standard`]() implementation. An `icecore` library can be used like any other C-library, but is meant to be used from `icecontrol` languages which provide a proper typesystem to guarantee type safety.
 
 ### `icecontrol` languages
-The first `icecontrol` language is PureScript, with a dedicated [`purescript-icecontrol`]() backend. A dependently typed `icecontrol` language is planned based on [`kami`]().
+The first `icecontrol` language is PureScript, with a dedicated [`PureIce`]() backend. A dependently typed `icecontrol` language is planned based on [`Kami`](). Dev toolchain developers write their glue code in an `icecontrol` language, and their individual transformation steps as ICE-functions.
 
-### `iceruntime`
-The actual ICE runtime [`iceruntime`]() is written in an `icecontrol` language, currently in PureScript.
+### ICE-functions
 
-### `ice-languages`
+### ICE-type providers
 
-### `rei` buildsystem
-
-
+### Rei buildsystem
 
 
 
