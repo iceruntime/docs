@@ -10,4 +10,5 @@ to write buildsystems (and package-managers based on Nix). This way, future lang
 
 Current problems with Nix-buildsystem integrations:
  - [Cargo does not provide access to its dependency resolution algorithm](https://hadean.com/blog/managing-rust-dependencies-with-nix-part-i/)
- 
+ - [Nix does not cache failed builds](https://github.com/NixOS/nix/issues/4127)
+
