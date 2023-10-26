@@ -12,3 +12,6 @@ Current problems with Nix-buildsystem integrations:
  - [Cargo does not provide access to its dependency resolution algorithm](https://hadean.com/blog/managing-rust-dependencies-with-nix-part-i/)
  - [Nix does not cache failed builds](https://github.com/NixOS/nix/issues/4127)
 
+General problems with nix:
+ - Before starting long builds, users cannot see the "build plan" because it is not static. Our system should give you all build steps statically even before building.
+
