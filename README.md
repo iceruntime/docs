@@ -13,5 +13,5 @@ Current problems with Nix-buildsystem integrations:
  - [Nix does not cache failed builds](https://github.com/NixOS/nix/issues/4127)
 
 General problems with nix:
- - Before starting long builds, users cannot see the "build plan" because it is not static. Our system should give you all build steps statically even before building.
+ - Before starting long builds, users cannot see the "build plan" because it is not static. Our system should give you all build steps statically even before building. Part of the problem is that the outputs of Nix flakes are given by a function. This means that without choosing specific inputs it is impossible to know what the outputs are going to be.
 
